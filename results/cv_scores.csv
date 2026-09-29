@@ -1,0 +1,16 @@
+model,fold,accuracy,f1_macro
+logistic_regression,0,1.0,1.0
+logistic_regression,1,1.0,1.0
+logistic_regression,2,1.0,1.0
+logistic_regression,3,0.9921875,0.9932869815391993
+logistic_regression,4,0.9921875,0.9934936998854524
+random_forest,0,1.0,1.0
+random_forest,1,1.0,1.0
+random_forest,2,1.0,1.0
+random_forest,3,0.9921875,0.9932869815391993
+random_forest,4,0.9921875,0.9934936998854524
+svm_rbf,0,1.0,1.0
+svm_rbf,1,1.0,1.0
+svm_rbf,2,1.0,1.0
+svm_rbf,3,0.9921875,0.9932869815391993
+svm_rbf,4,0.9921875,0.9934936998854524

@@ -1,0 +1,14 @@
+# Data is downloaded by src/download_data.py, not committed
+data/*
+!data/.gitkeep
+
+# Generated model file (large)
+results/*.joblib
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+.DS_Store

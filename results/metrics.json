@@ -1,0 +1,25 @@
+{
+  "logistic_regression": {
+    "cv_accuracy_mean": 0.996875,
+    "cv_accuracy_std": 0.0038273277230987156,
+    "cv_f1_macro_mean": 0.9973561362849303,
+    "test_accuracy": 0.9937888198757764,
+    "test_f1_macro": 0.994710743801653
+  },
+  "random_forest": {
+    "cv_accuracy_mean": 0.996875,
+    "cv_accuracy_std": 0.0038273277230987156,
+    "cv_f1_macro_mean": 0.9973561362849303,
+    "test_accuracy": 0.9875776397515528,
+    "test_f1_macro": 0.9893139040680025
+  },
+  "svm_rbf": {
+    "cv_accuracy_mean": 0.996875,
+    "cv_accuracy_std": 0.0038273277230987156,
+    "cv_f1_macro_mean": 0.9973561362849303,
+    "test_accuracy": 0.9937888198757764,
+    "test_f1_macro": 0.994710743801653
+  },
+  "best_model": "logistic_regression",
+  "k_genes": 500
+}
