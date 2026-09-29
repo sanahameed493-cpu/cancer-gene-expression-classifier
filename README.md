@@ -1,6 +1,6 @@
 # Cancer Type Classification from Gene Expression
 
-!\[tests](https://github.com/sanahameed493-cpu/cancer-gene-expression-classifier/actions/workflows/tests.yml/badge.svg)
+![tests](https://github.com/sanahameed493-cpu/cancer-gene-expression-classifier/actions/workflows/tests.yml/badge.svg)
 
 Predicting which of five cancers a tumor came from using only its RNA-seq gene expression profile. The data is 801 tumor samples from The Cancer Genome Atlas (TCGA), each measured across 20,531 genes.
 
