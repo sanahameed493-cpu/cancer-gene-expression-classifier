@@ -33,14 +33,14 @@ Results from `python -m src.train` with the 500 top genes (5-fold CV on 640 trai
 
 
 | Model | CV accuracy | CV macro F1 | Test accuracy | Test macro F1 | Test errors |
-
 |-------|-------------|-------------|---------------|---------------|-------------|
-
 | Logistic regression | 99.69% ± 0.38 | 99.74% | 99.38% | 99.47% | 1 / 161 |
-
 | Random forest | 99.69% ± 0.38 | 99.74% | 98.76% | 98.93% | 2 / 161 |
-
 | SVM (RBF) | 99.69% ± 0.38 | 99.74% | 99.38% | 99.47% | 1 / 161 |
+
+![PCA of tumor samples](results/pca.png)
+
+![Confusion matrix, SVM](results/confusion_svm_rbf.png)
 
 
 
@@ -48,12 +48,12 @@ All three models tied in cross-validation, so the choice of model matters little
 
 Figures written to `results/`:
 
-|File|What it shows|
-|-|-|
-|`pca.png`|Samples projected on the first two principal components|
-|`cv\_scores.png`|Macro F1 across the 5 CV folds for each model|
-|`confusion\_<model>.png`|Test set confusion matrix per model|
-|`top\_genes.png`|20 most important genes in the random forest|
+| File | What it shows |
+|------|---------------|
+| `pca.png` | Samples projected on the first two principal components |
+| `cv_scores.png` | Macro F1 across the 5 CV folds for each model |
+| `confusion_<model>.png` | Test set confusion matrix per model |
+| `top_genes.png` | 20 most important genes in the random forest |
 
 Expect accuracy close to 100%. These five cancers come from five different tissues, and tissue identity dominates tumor expression. The PCA plot already shows the groups separating before any labels are used. So the high score says more about the problem than about the models, and the confusion matrices (which classes, if any, get mixed up) and the gene rankings are the parts worth discussing.
 
@@ -76,16 +76,16 @@ Expect accuracy close to 100%. These five cancers come from five different tissu
 cancer-gene-expression-classifier/
 ├── data/                        # downloaded data (not committed)
 ├── notebooks/
-│   └── 01\_exploration.ipynb     # exploratory analysis
+│   └── 01_exploration.ipynb     # exploratory analysis
 ├── results/                     # figures and metrics from training
 ├── src/
-│   ├── download\_data.py         # fetches the dataset from UCI
+│   ├── download_data.py         # fetches the dataset from UCI
 │   ├── data.py                  # loading and summary
 │   ├── models.py                # sklearn pipelines
 │   ├── plots.py                 # figures
 │   └── train.py                 # cross-validation, testing, outputs
 ├── tests/
-│   └── test\_pipeline.py         # end-to-end test on synthetic data
+│   └── test_pipeline.py         # end-to-end test on synthetic data
 ├── .github/workflows/tests.yml  # runs tests on every push
 └── requirements.txt
 ```
@@ -96,10 +96,10 @@ cancer-gene-expression-classifier/
 git clone https://github.com/sanahameed493-cpu/cancer-gene-expression-classifier.git
 cd cancer-gene-expression-classifier
 python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\\Scripts\\activate
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-python -m src.download\_data      # about 70 MB
+python -m src.download_data      # about 70 MB
 python -m src.train              # takes a few minutes
 python -m src.train --k-genes 100   # try a different number of genes
 
@@ -117,4 +117,5 @@ The data comes from the TCGA Pan-Cancer project: The Cancer Genome Atlas Researc
 ## License
 
 MIT
+
 
